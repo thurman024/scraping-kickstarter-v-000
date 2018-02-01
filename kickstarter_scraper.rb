@@ -10,6 +10,8 @@ def create_project_hash
   #description: project.css("p.bbcard_blurb")
   #location: project.css("ul.project-meta span.location-name").text
   # percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
+  kickstarter.css("li.project.grid_4").each do |project|
+    projects[project] = {}
   binding.pry
 end
 create_project_hash
